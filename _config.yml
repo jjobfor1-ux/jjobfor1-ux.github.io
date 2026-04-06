@@ -1,17 +1,16 @@
 # Site settings
-title: A blog about lorem ipsum dolor sit amet
-description: A blog about lorem ipsum dolor sit amet
-# baseurl: "/particle" # the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title: Main Portfolio for1
+description: 제 포트폴리오 사이트입니다
+
+baseurl: ""          # 이 줄 꼭 넣으세요 (빈칸으로)
+url: "https://jjobfor1-ux.github.io"
 
 # User settings
-username: Anon Developer
-user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
-user_title: Software Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
+username: jjobfor1-ux
+user_title: 웹 모험가
+user_description: 안녕하세요! 저는 만드는 걸 좋아합니다. 제 프로젝트들을 구경해보세요.
+email: jjobfor1@email.com
+github_username: jjobfor1-ux
 
 # Google-analytics
 google-analytics:
