@@ -8,32 +8,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <style>
-    /* ── 전체 배경: 별 화면과 동일한 어두운 색으로 통일 ── */
-    *, *::before, *::after { box-sizing: border-box; }
-
+    /* 전체 배경 어둡게 통일 */
     html, body {
       margin: 0;
       padding: 0;
       background: #0a0a0a !important;
       color: #ffffff !important;
-      font-family: sans-serif;
     }
 
-    /* 모든 텍스트 흰색 강제 */
-    h1, h2, h3, h4, h5, h6, p, span, li, td, th, label, div {
+    /* main.css의 color:#333, color:#555 덮어쓰기 */
+    h1, h2, h3, h4, h5, h6, p, span, li, div, strong {
       color: #ffffff !important;
     }
 
-    a { color: #4a90e2; }
-
-    /* 기존 테마가 배경 흰색으로 덮는 거 방지 */
-    section, .wrapper, .container, header, footer,
-    .user-details, .user, .tech, .project-image, .project-info {
+    /* main.css의 흰 배경 방지 */
+    body, section, header, footer,
+    .wrapper, .container,
+    .user-details, .user, .tech,
+    .user-projects, .project-image, .project-info {
       background: transparent !important;
       background-color: transparent !important;
     }
 
-    /* ── 4번: 3개 카드 화면 끝~끝 ── */
+    /* main.css가 #about, #projects에 max-width:960px 제한 걸어놓은 거 해제 */
+    #about {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* 카드 3개 화면 끝~끝 */
     .user {
       display: flex !important;
       width: 100vw !important;
@@ -41,42 +46,35 @@
       padding: 0 !important;
       gap: 0 !important;
       flex-wrap: nowrap !important;
+      font-size: 2.8rem !important;
     }
 
     .tech {
       flex: 1 1 0 !important;
       min-width: 0 !important;
-      padding: 40px 30px !important;
-      border: none !important;
+      padding: 40px 20px !important;
       border-right: 1px solid #222 !important;
       text-align: center !important;
       background: #0f0f0f !important;
+      margin: 0 !important;
     }
 
     .tech:last-child {
       border-right: none !important;
     }
 
-    /* ── 3번: My Expertise + 버튼 한 박스 ── */
+    .tech p {
+      font-size: 0.9rem !important;
+    }
+
+    /* My Expertise 박스 */
     .user-details {
       width: 100vw !important;
       padding: 80px 20px 40px !important;
       text-align: center !important;
-      background: transparent !important;
     }
 
-    .user-details h1 {
-      font-size: 2.5rem !important;
-      margin-bottom: 12px !important;
-    }
-
-    .user-details p {
-      font-size: 1.1rem !important;
-      opacity: 0.8;
-      margin-bottom: 30px !important;
-    }
-
-    /* 버튼이 about.html에 없으면 아래 .btn 스타일만 준비 */
+    /* 버튼 */
     .btn {
       background: rgba(255,255,255,0.1);
       border: 2px solid white;
@@ -86,22 +84,27 @@
       border-radius: 50px;
       font-weight: bold;
       display: inline-block;
+      margin-top: 10px;
     }
 
-    /* ── 1번: 헤더/네비도 배경 투명하게 ── */
+    /* 헤더/네비 투명 */
     .site-header, nav, .navbar, header {
       background: transparent !important;
-      background-color: transparent !important;
       border: none !important;
       box-shadow: none !important;
     }
 
-    /* footer */
-    footer {
+    /* 프로젝트 링크 색상 */
+    .project-link {
       color: #ffffff !important;
-      border-top: 1px solid #222 !important;
-      padding: 30px !important;
-      text-align: center !important;
+      border-color: #ffffff !important;
+    }
+
+    /* footer */
+    .footer {
+      background: #111 !important;
+      color: #ffffff !important;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
