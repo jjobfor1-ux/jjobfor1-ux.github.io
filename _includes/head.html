@@ -1,82 +1,49 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Particles.js 라이브러리 -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Particles.js (필요할 때만 사용) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
 
   <style>
     body, html {
       margin: 0;
       padding: 0;
-      background: #0a0a0a !important;
-      overflow-x: hidden;
-    }
-
-    .full-hero {
-      position: relative;
-      width: 100vw;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    #particles-js {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
       background: #0a0a0a;
     }
 
-    .hero-content {
+    /* 기존 테마 콘텐츠가 잘 보이도록 강제 설정 */
+    .user-details, .user, .tech, section, .wrapper, .container, footer {
       position: relative;
-      z-index: 2;
-      max-width: 900px;
-      padding: 0 20px;
+      z-index: 10;
+      background-color: #0a0a0a !important;
+      color: #ffffff !important;
     }
 
-    .hero-content h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
+    .tech {
+      background-color: #0a0a0a !important;
+      border: 1px solid #333;
     }
 
-    .hero-content h2 {
-      font-size: 2.2rem;
-      margin-bottom: 25px;
-      opacity: 0.95;
+    .tech h2, .tech p {
+      color: #ffffff !important;
     }
 
-    .hero-content p {
-      font-size: 1.3rem;
-      margin-bottom: 40px;
-      line-height: 1.5;
+    /* 링크 색상 */
+    a {
+      color: #4a90e2;
     }
 
-    .btn {
-      background: rgba(255,255,255,0.1);
-      border: 2px solid white;
+    /* Hero 관련 스타일은 최소화 (필요하면 나중에 다시 켜기) */
+    .hero {
+      position: relative;
       color: white;
-      padding: 12px 30px;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      display: inline-block;
     }
   </style>
 </head>
