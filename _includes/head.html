@@ -109,5 +109,115 @@
       color: #ffffff !important;
       border-top: 1px solid #222;
     }
+
+    /* ── Project grid (layout only — reuses colors already defined above) ── */
+    .project-section-title {
+      font-size: 0.78rem !important;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45) !important;
+      margin: 0 0 20px !important;
+      padding: 40px 0 16px !important;
+      border-top: 1px solid #1e1e1e;
+    }
+    .project-section-title:first-child {
+      border-top: none;
+      padding-top: 0 !important;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 26px;
+      margin: 0 0 10px !important;
+    }
+    .project-grid--sub {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      opacity: 0.88;
+    }
+    .project-card {
+      display: flex !important;
+      flex-direction: column !important;
+      background: #0f0f0f !important;
+      border: 1px solid #222 !important;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.25s ease;
+      margin: 0 !important;
+      width: auto !important;
+    }
+    .project-card:hover {
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    .project-card-media {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #111 !important;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .project-card-media img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      border-radius: 0 !important;
+      float: none !important;
+      display: block;
+    }
+    .project-card-body {
+      padding: 16px 18px 18px !important;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card-body h3 {
+      font-size: 1rem !important;
+      font-weight: 600;
+      margin: 0 0 8px !important;
+      padding: 0 !important;
+      line-height: 1.3;
+    }
+    .project-card-body p {
+      font-size: 0.82rem !important;
+      line-height: 1.5;
+      margin: 0 0 12px !important;
+      opacity: 0.72;
+      flex: 1;
+    }
+    .project-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .project-card-tags span {
+      font-size: 0.68rem !important;
+      padding: 3px 9px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+    .project-card-tags span:first-child {
+      border-color: rgba(255, 255, 255, 0.45);
+      opacity: 1;
+    }
+    .project-card-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .project-card-links a {
+      font-size: 0.75rem !important;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 20px;
+      text-decoration: none !important;
+      transition: background 0.2s ease;
+      margin: 0 !important;
+    }
+    .project-card-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
   </style>
 </head>
