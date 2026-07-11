@@ -40,6 +40,18 @@
   </div>
 
   <div class="project-card">
+    <a class="project-card-media" href="https://lex-rouge.vercel.app/" target="_blank">
+      <img alt="Lex" src="{{ "/assets/img/lex.png" | prepend: site.baseurl }}" onerror="this.remove()" />
+    </a>
+    <div class="project-card-body">
+      <h3>Lex</h3>
+      <p>프로젝트 업무를 칸반·캘린더·매트릭스·테이블 등 여러 뷰로 관리하는 팀 협업 도구입니다. 스페이스·팀 초대, 반복 업무, 월간 리포트, 5종 내보내기(PDF·Excel·Word·Markdown·TXT)를 지원합니다.</p>
+      <div class="project-card-tags"><span>Full-Stack</span><span>Next.js · Supabase</span><span>팀 협업 · 멀티뷰</span></div>
+      <div class="project-card-links"><a href="https://lex-rouge.vercel.app/" target="_blank">Check it out →</a></div>
+    </div>
+  </div>
+
+  <div class="project-card">
     <div class="project-card-media">
       <img alt="VibePort" src="{{ "/assets/img/vibeport.png" | prepend: site.baseurl }}" />
     </div>
@@ -95,15 +107,15 @@
   </div>
 
   <div class="project-card">
-    <a class="project-card-media" href="https://world-law-web.vercel.app/" target="_blank">
-      <img alt="World Law" src="{{ "/assets/img/world-law.png" | prepend: site.baseurl }}" />
-    </a>
+    <div class="project-card-media">
+      <img alt="World Law" src="{{ "/assets/img/world-law.png" | prepend: site.baseurl }}" onerror="this.remove()" />
+    </div>
     <div class="project-card-body">
       <h3>World Law</h3>
-      <p>59개국·기구 법령을 업로드하면 AI가 자동 분류하고 시맨틱 검색을 지원하는 아카이브입니다. LLM 연동용 커스텀 MCP 서버도 자체 구축했습니다.</p>
+      <p>59개국·기구 법령을 대량 업로드하면 AI가 자동 분류하고 시맨틱 검색을 지원하는 아카이브입니다. LLM 연동용 커스텀 MCP 서버도 자체 구축했습니다. (업로드 사이트는 접근 인증으로 보호되어 저장소 링크로 대체합니다.)</p>
       <div class="project-card-tags"><span>Full-Stack</span><span>Next.js · Supabase</span><span>Gemini AI · MCP</span></div>
       <div class="project-card-links">
-        <a href="https://world-law-web.vercel.app/" target="_blank">업로드 사이트 →</a>
+        <a href="https://github.com/jjobfor1-ux/world-law-web" target="_blank">GitHub 저장소 →</a>
         <a href="https://world-law-mcp.onrender.com/" target="_blank">MCP 서버 →</a>
       </div>
     </div>
@@ -115,8 +127,8 @@
     </a>
     <div class="project-card-body">
       <h3>Korean Caselaw Browser</h3>
-      <p>판례를 검색하고 북마크·메모·저장 목록·일일 추천 알림을 제공하는 브라우저입니다.</p>
-      <div class="project-card-tags"><span>Full-Stack</span><span>법제처 API</span><span>Next.js · Supabase</span></div>
+      <p>법제처 API로 판례를 키워드·사건번호(예: 2010다12345)로 검색하고, 북마크·메모·저장 목록·일일 추천 알림을 제공하는 브라우저입니다. 검색 정확도(recall)를 개선했습니다.</p>
+      <div class="project-card-tags"><span>Full-Stack</span><span>법제처 API</span><span>사건번호 검색 · recall 개선</span></div>
       <div class="project-card-links"><a href="https://korean-caselaw.vercel.app/" target="_blank">Check it out →</a></div>
     </div>
   </div>
@@ -236,14 +248,14 @@
 <div class="project-grid">
 
   <div class="project-card">
-    <div class="project-card-media">
+    <a class="project-card-media" href="https://densepdf.vercel.app/" target="_blank">
       <img alt="DensePDF" src="{{ "/assets/img/densepdf.png" | prepend: site.baseurl }}" onerror="this.remove()" />
-    </div>
+    </a>
     <div class="project-card-body">
       <h3>DensePDF</h3>
-      <p>DOCX·HWP·PDF 등 여러 문서를 하나의 초고밀도 PDF로 병합해 AI가 읽기 좋은 형태로 만드는 도구입니다. 서버 없이 전부 브라우저(클라이언트)에서 처리합니다.</p>
-      <div class="project-card-tags"><span>Frontend</span><span>Vite · pdf-lib</span><span>클라이언트 사이드 병합</span></div>
-      <div class="project-card-links"><a href="https://github.com/jjobfor1-ux/densepdf" target="_blank">GitHub 저장소 →</a></div>
+      <p>DOCX·HWP·PDF 등 여러 문서를 하나의 초고밀도(8pt·장평 95%, 최대 100페이지) AI 판독용 PDF로 병합하는 도구입니다. OCR을 포함한 모든 처리를 서버 없이 전부 브라우저(클라이언트)에서 수행합니다.</p>
+      <div class="project-card-tags"><span>Frontend</span><span>Vite · pdf-lib</span><span>클라이언트 사이드 · OCR</span></div>
+      <div class="project-card-links"><a href="https://densepdf.vercel.app/" target="_blank">Check it out →</a></div>
     </div>
   </div>
 
@@ -331,6 +343,42 @@
       <p>전세계 자료원을 가로질러 검색하고 조사 자료를 정리해주는 리서치 검색 엔진입니다.</p>
       <div class="project-card-tags"><span>Full-Stack</span><span>검색 엔진</span><span>Global Research</span></div>
       <div class="project-card-links"><a href="https://global-research-tool.pages.dev/" target="_blank">Check it out →</a></div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-card-media">
+      <img alt="Claude Scheduler" src="{{ "/assets/img/claude-scheduler.png" | prepend: site.baseurl }}" onerror="this.remove()" />
+    </div>
+    <div class="project-card-body">
+      <h3>Claude Scheduler</h3>
+      <p>정해진 시각에 Claude Code(터미널)나 Claude Desktop에 프롬프트를 자동 실행·입력해주는 macOS용 로컬 스케줄러입니다. launchd로 상주하며 작은 웹 UI로 스케줄을 관리합니다.</p>
+      <div class="project-card-tags"><span>로컬 도구</span><span>Node.js · launchd</span><span>Claude 자동 실행</span></div>
+      <div class="project-card-links"><a href="https://github.com/jjobfor1-ux/claude-scheduler" target="_blank">GitHub 저장소 →</a></div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-card-media">
+      <img alt="Claude Remote" src="{{ "/assets/img/claude-remote.png" | prepend: site.baseurl }}" onerror="this.remove()" />
+    </div>
+    <div class="project-card-body">
+      <h3>Claude Remote</h3>
+      <p>집 밖의 갤럭시 폰에서 맥의 Claude Scheduler를 관리·즉시 실행하는 안드로이드 컴패니언 앱입니다. 유료 서버 없이 Tailscale로 폰과 맥을 같은 가상 네트워크에 묶어 원격 조종합니다.</p>
+      <div class="project-card-tags"><span>Mobile</span><span>Capacitor · Tailscale</span><span>폰↔맥 원격 조종 · APK</span></div>
+      <div class="project-card-links"><a href="https://github.com/jjobfor1-ux/claude-remote" target="_blank">GitHub 저장소 →</a></div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-card-media">
+      <img alt="Opus Orchestra" src="{{ "/assets/img/opus-orchestra.png" | prepend: site.baseurl }}" onerror="this.remove()" />
+    </div>
+    <div class="project-card-body">
+      <h3>Opus Orchestra</h3>
+      <p>Opus 4.8을 지휘자로 두는 Claude 오케스트레이션 스킬셋입니다. 모드 토글, 크로스모델 브리지(Gemini·Codex), 자동 검증 루프로 구성되며 Claude Code·Desktop에 설치해 씁니다.</p>
+      <div class="project-card-tags"><span>개발 도구</span><span>Claude Skills</span><span>오케스트레이션 · 크로스모델</span></div>
+      <div class="project-card-links"><a href="https://github.com/jjobfor1-ux/opus-orchestra" target="_blank">GitHub 저장소 →</a></div>
     </div>
   </div>
 
